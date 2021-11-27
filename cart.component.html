@@ -1,0 +1,105 @@
+<div class="cartlink">
+    <app-cartlink></app-cartlink>
+</div>
+
+
+
+
+
+
+
+<!-------empty cart-->
+<ng-container *ngIf="products.length ==0">
+    <div class="container empty-container mt-sm-5">
+        <div class="card" style="background-color: #ADD8E6;">
+            <h5 class="card-title">My cart</h5>
+        </div>
+        <div class="center mt-5">
+            <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/empty-cart-2685174-2232751.png" alt="">
+            <h4>Your cart is empty!</h4>
+            <h6>Add item to it now</h6>
+            <button class="btn btn-dark" routerLink="/main-component">Shop now</button>
+        </div>
+    </div>
+</ng-container>
+<ng-container *ngIf="products.length !=0">
+    <div class="row cart-component">
+        <div class="shoping-cart w-50">
+            <h3 class="ms-5">shoping-cart</h3>
+            <hr class="ms-5 me-5">
+            <div class="cart-item w-55 d-flex" *ngFor="let item of products;let i =index">
+                <div class="image mt-3 ms-5">
+                    <img src="{{item.image}}" style="height:90px;width:90px;">
+                </div>
+                <div class="ms-3">
+                    <h5>{{item.title}}</h5>
+                    <span>lorem lorem lorem</span>
+                    <h5>{{item.price}}</h5>
+                    <button (click)="removeitem(item)" class="btn btn-dark"><i class="fa fa-trash"></i></button>
+                </div>
+            </div>
+            <hr class="ms-5 me-5">
+            <div class=" button-class d-flex p-2 pt-4 ms-5">
+                <div class="paynow ">
+                    <button style="width:150px; height:50px;background-color: black; color: white;border:none;" routerLink="/shipping-detail">Pay now</button>
+                </div>
+                <div class="pay-cancel ps-2">
+                    <button style="width:150px;height:50px;  " (click)="emptycart()">Cancel</button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="summary w-25 w-sm-100 ms-5">
+            <h5>Summary</h5>
+            <hr>
+            <h5>Enter coupon code</h5>
+            <input type="text" #box (keyup.enter)="onEnter(box.value)" placeholder="Enter coupon code" name="string">
+            <p>{{value}}</p>
+            <hr>
+            <div class="subtotal d-flex justify-content-between">
+                <div class="sub1">
+                    <h6>subtotal</h6>
+                </div>
+                <div class="sub2">
+                    <h6>{{totalAmount}}</h6>
+                </div>
+            </div>
+            <div class="subtotal d-flex justify-content-between">
+                <div class="sub1">
+                    <h6>Shipping</h6>
+                </div>
+                <div class="sub2">
+                    <h6>Free</h6>
+                </div>
+            </div>
+            <div class="subtotal d-flex justify-content-between">
+                <div class="sub1">
+                    <h6>TAXES</h6>
+                </div>
+                <div class="sub2">
+                    <h6>10%</h6>
+                </div>
+            </div>
+            <div class="subtotal d-flex justify-content-between">
+                <div class="sub1">
+                    <h6>coupon(10%)</h6>
+                </div>
+                <div class="sub2">
+                    <h6>{{(totalAmount*10)/100}}</h6>
+                </div>
+            </div>
+            <div class="subtotal d-flex justify-content-between">
+                <div class="sub1">
+                    <h6>total</h6>
+                </div>
+                <div class="sub2">
+                    <h6>{{totalAmount-(totalAmount*10)/100}}</h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</ng-container>
+<router-outlet></router-outlet>
+<br><br>

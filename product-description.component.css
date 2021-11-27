@@ -1,0 +1,19 @@
+@media only screen and (max-width: 600px) {
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .image {
+        height: 150px!important;
+        width: 150px!important;
+    }
+    .product-detail {
+        width: 300px !important;
+    }
+    h3 {
+        font-size: 15px!important;
+    }
+    h6 {
+        font-size: 12px!important;
+    }
+}

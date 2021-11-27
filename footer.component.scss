@@ -1,0 +1,39 @@
+$footer-color:cadetblue;
+.navbar {
+    background-color: $footer-color!important;
+    // position: sticky!important;
+    // width: 100%!important;
+    height: 40px!important;
+    bottom: 0;
+    /*position: fixed !important;*/
+    .navbar-collapse {
+        justify-content: center;
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// .footer {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100% !important;
+// }
+
+/*.main-footer {
+    background-color: red;
+}*/
+
+.footer-div {
+    background-color: $footer-color!important;
+    height: 40px!important;
+    //     // position: sticky!important;
+    //     left: 0!important;
+    //     bottom: 0!important;
+    //     width: 100%!important;
+    // 
+}

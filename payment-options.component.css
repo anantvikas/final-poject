@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px) {
+    .main-div-payment {
+        display: flex!important;
+        flex-direction: column-reverse!important;
+    }
+    .card-number {
+        width: 190px !important
+    }
+    .border-dark {
+        width: 450px !important;
+    }
+    .card-holder-name-1 {
+        width: 330px !important
+    }
+    .credit-detail {
+        border: none !important;
+    }
+    .div2 {
+        /* margin-left: 10px!important; */
+        margin-top: 80px !important;
+        /* margin-left: -100px !important; */
+    }
+    .card-holder-name-1 {
+        margin-left: - 300px!important;
+    }
+    /* .paymentcartlink {
+        background-color: white !important;
+    } */
+}

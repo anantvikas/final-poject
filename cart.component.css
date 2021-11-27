@@ -1,0 +1,64 @@
+    @media screen and (max-width: 600px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 100px;
+            justify-content: space-around!important;
+            /* margin-left: 100px; */
+        }
+        .shop-btn {
+            margin-top: 5px !important;
+        }
+        .shop-nav {
+            background-color: white!important;
+        }
+        .empty-container {
+            margin-top: 150px!important;
+            position: relative !important;
+            /* background-color: red!important; */
+        }
+        .cart-component {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        h3 {
+            font-size: 13px!important;
+        }
+        h5 {
+            font-size: 13px!important;
+        }
+        .button-class {
+            display: flex;
+            flex-direction: column!important;
+            /* justify-content: space-around!important; */
+        }
+        .paynow {
+            /* margin-top: 10px !important;
+            padding-top: 10px !important; */
+        }
+        .pay-cancel {
+            margin-top: 10px !important;
+        }
+    }
+    /* @media screen and (max-width: 600px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 100px;
+            
+        }
+        .shop-nav {
+            background-color: white!important;
+        }
+        .empty-container {
+            margin-top: 150px!important;
+            position: relative !important;
+            background-color: red!important;
+        }
+    } */
+    
+    .shop-nav {
+        margin-left: 0px;
+    }

@@ -1,0 +1,16 @@
+    @media screen and (max-width: 800px) {
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 100px;
+            justify-content: space-around!important;
+            /* margin-left: 100px; */
+        }
+        .maincartlink {
+            background-color: white!important;
+        }
+        .shop-nav {
+            background-color: white!important;
+        }
+    }

@@ -1,0 +1,19 @@
+.shop-nav {
+    padding: 50px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    font-weight: 200;
+    // position: relative;
+    // line-height: 2.1428571435;
+    color: inherit;
+    background-color: #eee;
+    height: 150px;
+    .row {
+        .headactive {
+            .active {
+                background-color: brown!important;
+                color: white!important;
+            }
+        }
+    }
+}

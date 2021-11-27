@@ -1,0 +1,161 @@
+<div class="shippin-gcartlink">
+    <app-cartlink></app-cartlink>
+</div>
+<div class="d-flex shipping-cart">
+    <div class=" top-head col-md-9 justify-content-center w-lg-50 w-sm-100">
+        <div class="card card-custom pb-4" style="border:none;">
+            <div class="card-body mt-0 mx-5">
+                <div class="text-center mb-lg-3 pb-lg-2 mt-lg-3 w-sm-100 ">
+                    <h4 class="" style="color: #495057 ;">Shipping Details</h4>
+                </div>
+
+                <form class="mb-lg-0" [formGroup]="shippingform" (ngSubmit)="shippingformdata()" class="was-validated">
+
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="text" id="form9Example1" name="firstname" class="form-control input-custom" placeholder="First name" FormControlName="firstname" required/>
+                                <!-- <span style="color: red" *ngIf="firstname.invalid ">invalid input</span> -->
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="text" id="form9Example2" name="lastname" class="form-control input-custom" placeholder="Last name" FormControlName="lastname" required />
+
+                            </div>
+                        </div>
+                        <div class=" mt-lg-3">
+                            <input type="text" class="form-control" name="Address" id="formGroupExampleInput" placeholder="Address" FormControlName="Address" required>
+                        </div>
+                        <div class=" mt-lg-3">
+                            <input type="text" class="form-control" name="Address2" id="formGroupExampleInput" placeholder="Address2" FormControlName="Address" required>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="input-group">
+                                <select class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon" required>
+                              <option selected>Choose...</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                                <button class="btn btn-outline-secondary" type="button">Country</button >
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="text" id="form9Example4" name="city" class="form-control input-custom" placeholder="city" FormControlName="city" required/>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="text" id="form9Example6" name="zipcode" class="form-control input-custom" placeholder="Zip/Postal Code" FormControlName="zipcode" required/>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-outline">
+                                <input type="email" id="typeEmail" name="email" class="form-control input-custom" placeholder="Phone number" FormControlName="email" checked />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col">
+                            <div class="form-check border d-flex justify-content-center mt-4" style="height: 50px !important;background-color: cadetblue!important;color:white !important;">
+                                <input class="form-check-input mt-lg-3 me-lg-5 mt-sm-3 pt-sm-3" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" placeholder="Free shipping"/>
+                                <label class="form-check-label mt-2" for="flexRadioDisabled">
+                                Free shipping
+                              </label>
+                            </div>
+                        </div>
+                        <div class="col mt-4  ">
+                            <div class="form-check border d-flex justify-content-center" style="height: 50px !important;background-color: cadetblue!important;color:white !important;">
+                                <input class="form-check-input mt-sm-3 ps-1" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" placeholder="Free shipping" required />
+                                <label class="form-check-label mt-2 ps-1" for="flexRadioDisabled">
+                                Next Day Delivery -$20
+                              </label>
+                            </div>
+
+                        </div>
+                        <div class="buttons d-flex p-2 pt-lg-4 ms-lg-5">
+                            <div class="paynow ">
+                                <button type="submit" style="width:150px; height:40px;background-color: black; color: white;border:none;"  routerLink="/payment-options" required>Pay now</button>
+                            </div>
+                            <div class="pay-cancel ps-2">
+                                <button style="width:150px;height:40px;  " routerLink="/cart">Cancel</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- <button class="btn btn-primary">login</button> -->
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class=" top-second-div container w-25 w-sm-100 mt-lg-5">
+        <div class="heading">
+            <h4>Summary</h4>
+            <hr>
+            <div *ngFor="let item of products">
+                <div class="row">
+
+                </div>
+                <div class="products d-flex">
+                    <div class="image" style="height:80px;width:80px;">
+                        <img src="{{item.image}}" style="height:80px;width:80px;">
+                    </div>
+                    <div class="product-details ms-lg-5">
+                        <h5>{{item.title}}</h5>
+                        <h5>${{item.price}}</h5>
+                    </div>
+                </div>
+            </div>
+            <hr class="ms-2">
+
+        </div>
+        <select class="form-select ms-lg-2 me-sm-2" aria-label="Default select example" style="width: 300px !important;">
+            <option selected>HAVE A VOUCHER?</option>
+            <option value="1"></option>
+        </select>
+        <div class="subtotal d-flex justify-content-between">
+            <div class="sub1">
+                <h6>subtotal</h6>
+            </div>
+            <div class="sub2 ms-sm-2">
+                <h6>{{totalAmount-(totalAmount*10)/100}}</h6>
+            </div>
+        </div>
+        <div class="subtotal d-flex justify-content-between">
+            <div class="sub1">
+                <h6>Shipping</h6>
+            </div>
+            <div class="sub2">
+                <h6>Free</h6>
+            </div>
+        </div>
+        <div class="subtotal d-flex justify-content-between">
+            <div class="sub1">
+                <h6>TAXES</h6>
+            </div>
+            <div class="sub2">
+                <h6>13$</h6>
+            </div>
+        </div>
+        <div class="subtotal d-flex justify-content-between">
+            <div class="sub1">
+                <h6>total</h6>
+            </div>
+            <div class="sub2">
+                <h6>{{totalAmount-(totalAmount*10)/100+13}}$</h6>
+            </div>
+        </div>
+    </div>
+</div>

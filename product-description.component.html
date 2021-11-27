@@ -1,0 +1,103 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 d-md-flex ">
+            <div class="main-div d-flex " *ngFor="let item of elements">
+                <div class="product-image bg-light m-auto col-lg-6 col-md-6 d-flex justify-content-center ">
+                    <div class="card-front">
+                        <img class="image mt-3 " src="{{item.image}}">
+                    </div>
+
+                </div>
+                <div class="product-detail w-50 bg-light">
+                    <div class="product-detail-top-section ms-5 mt-3">
+                        <h3>{{item.title}}</h3>
+                        <span class="fa fa-star checked" style="color:red"></span>
+                        <span class="fa fa-star checked" style="color:red"></span>
+                        <span class="fa fa-star checked" style="color:red"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="" style="color:red">&nbsp;&orarr;</span>
+                        <span style="color:red">&nbsp;review</span>&nbsp;&nbsp;&nbsp;
+                        <hr>
+                    </div>
+                    <div class="d-flex ms-lg-5 ">
+                        <div class="price ms-sm-5">
+                            <h4>${{item.price}}</h4>
+                        </div>
+                        <div class="select" col-lg-6 col-md-6 col-md-6>
+                            <select class="form-select ms-lg-5" aria-label="Default select example">
+                            <option selected>Slect Modal</option>
+                            <option value="1"></option>
+                        </select>
+
+                        </div>
+
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p class="ms-5 me-5 mt-3 me-sm-2" style="color:red">{{item.description}}</p>
+                        <hr>
+                    </div>
+                    <div class="paynow ms-5 mt-4 ">
+                        <button routerLink="/cart" style="width:150px; background-color: black; color: white;border:none;">Add to cart</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-2">
+            <h3>Reviews</h3>
+        </div>
+        <hr>
+        <div class="review-details d-flex">
+            <div class="user-name d-flex col-lg-3 mt-3">
+                <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80" alt="Avatar" style="border-radius: 50%; height: 50px;width:50px;">
+                <div class="ms-4">
+                    <h5>johan</h5>
+                    <h6>Agust 14 2021</h6>
+                    <span class="fa fa-star checked" style="color:red"></span>
+                    <span class="fa fa-star checked" style="color:red"></span>
+                    <span class="fa fa-star checked" style="color:red"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+
+            </div>
+            <div class="usser-input col-lg-6 mt-3">
+                <p style="color: blue;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati animi ipsam porro provident, aspernatur molestias sed? Cumque laborum eaque nisi tempora, officiis ullam soluta natus aliqu
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+
+
+        <div class="review-details d-flex">
+            <div class="user-name d-flex col-lg-3 mt-3">
+                <img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE0fHx8ZW58MHx8fHw%3D&w=1000&q=80" alt="Avatar" style="border-radius: 50%; height: 50px;width:50px;">
+                <div class="ms-4">
+                    <h5>johan</h5>
+                    <h6>Agust 14 2021</h6>
+                    <span class="fa fa-star checked" style="color:red"></span>
+                    <span class="fa fa-star checked" style="color:red"></span>
+                    <span class="fa fa-star checked" style="color:red"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+
+            </div>
+            <div class="usser-input col-lg-6 mt-3">
+                <p style="color: blue;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati animi ipsam porro provident, aspernatur molestias sed? Cumque laborum eaque nisi tempora, officiis ullam soluta natus perspiciatis voluptatum minus voluptatem aliqu
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

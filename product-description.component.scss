@@ -1,0 +1,38 @@
+.container-fluid {
+    // margin-top: 100px !important;
+    padding-top: 100px;
+    overflow: hidden;
+    .row {
+        .main-div {
+            position: relative!important;
+            box-shadow: none!important;
+            background: none!important;
+            .product-image {
+                // background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%) !important;
+                padding-top: 30px !important;
+                .card-front {
+                    height: 350px !important;
+                    .image {
+                        height: 300px;
+                        width: 300px;
+                        border: 1px solid black!important;
+                        border-radius: 25px;
+                        transition: all 0.8s ease !important;
+                        backface-visibility: hidden!important;
+                        top: 0;
+                        left: 0;
+                        color: white;
+                        transform: rotate(300deg);
+                        cursor: pointer;
+                    }
+                    .image:hover {
+                        transform: translateY(-20px);
+                    }
+                }
+            }
+            .product-detail {
+                // background-color: aquamarine!important;
+            }
+        }
+    }
+}

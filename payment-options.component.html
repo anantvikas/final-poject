@@ -1,0 +1,136 @@
+<div class="paymentcartlink">
+    <app-cartlink></app-cartlink>
+</div>
+
+<div class="main-component container-fluid main-container">
+    <div class="row   d-flex justify-content-around">
+        <div class="main-div-payment clo-lg-6 d-flex  ">
+            <div class="div1 ms-5  ">
+                <h2>Payment method </h2>
+                <hr>
+                <div class="border border-dark  m-2">
+
+                    <div class="form-check ms-3">
+                        <div class="radio-button ms-0">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                      Credit Card
+                    </label>
+                            <p class="ms-1" style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicin</p>
+                        </div>
+                        <div class="d-flex credit-detail ">
+                            <div class="card-number">
+                                <input type="text" placeholder="0000   0000   0000   0000" autocomplete="email" style="width: 320px;">
+                            </div>
+                            <div class="card-month-year">
+
+                                <input type="text" id="exp" name="expdate" placeholder="MM/YY" style="width: 70px;">
+
+                            </div>
+                            <div class="card-cvv ">
+
+                                <input id="cvv" type="text" placeholder="cvv" style="width: 70px;">
+
+                            </div>
+
+
+                        </div>
+                        <div class="card-holder-name mt-4 mb-3">
+                            <input class="card-holder-name-1" type="text" placeholder="Card holder Name" style="width: 470px;">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div class="paypal d-flex border-dark ms-5 w-50 mt-5" style="">
+                        <div class="radio-paypal ms-1 w-75">
+                            <input class="form-check-input ms-0" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">&nbsp; Paypal </label>
+                            <p class="ms-4" style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur adipisicin lore dolor sit, amet consectetur adipisicing elit. Cumque, consequatur. Quaerat vel dolor</p>
+                        </div>
+                        <div class="paypal-icon  ms-4">
+                            <img class="" src="https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png" style="height:80px;width:80px;">
+                        </div>
+
+                    </div>
+                    <div class="mt-5">
+                        <div class="d-flex p-2 ">
+                            <div class="paynow">
+                                <button style="width:150px; background-color: black; color: white;border:none;" routerLink="/place-order">Pay now</button>
+                            </div>
+                            <div class="pay-cancel ps-2">
+                                <button style="width:150px;  border:none;" routerLink="/shipping-detail">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="div2 w-lg-25 ms-lg-5" style="margin-left:200px!important;">
+                <div class="div2-heading ms-lg-4">
+                    <h2>Summary</h2>
+                    <hr style="overflow: hidden;">
+                </div>
+                <div class="product-summary d-flex " *ngFor="let item of products">
+                    <div class="product-image ms-lg-4">
+                        <img src="{{item.image}}" style="height:80px;width:120px;background-color:lightsalmon">
+                    </div>
+                    <div class="product-name ms-lg-4">
+                        <h5>{{item.title}}}</h5>
+                        <h6 style="color:red">{{item.price}}</h6>
+                    </div>
+
+                </div>
+                <!-- <div class="product-summary d-flex pt-4 ">
+                    <div class="product-image ms-4">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" style="height:80px;width:120px;background-color:lightsalmon">
+                    </div>
+                    <div class="product-name ms-4">
+                        <h5>Painting</h5>
+                        <h6 style="color:red">$500</h6>
+                    </div>
+
+                </div> -->
+                <hr>
+                <select class="form-select ms-lg-4 w-25" aria-label="Default select example" style="width: 300px !important;">
+                    <option selected>HAVE A VOUCHER?</option>
+                    <option value="1"></option>
+                </select>
+                <div class="product-summary d-flex  justify-content-between pt-4 ">
+                    <div class=" ms-lg-4">
+                        <h6>SUBTOTAL</h6>
+                    </div>
+                    <div class="product-name ms-lg-4 me-4">
+                        <h6>${{totalAmount}}</h6>
+                    </div>
+                </div>
+                <div class=" d-flex  justify-content-between pt-2 ">
+                    <div class=" ms-lg-4">
+                        <h6>SHIPPING</h6>
+                    </div>
+                    <div class="product-name ms-lg-4 me-4">
+                        <h6>FREE</h6>
+                    </div>
+                </div>
+                <div class="d-flex  justify-content-between pt-2 ">
+                    <div class=" ms-lg-4">
+                        <h6>TAXES</h6>
+                    </div>
+                    <div class="product-name ms-lg-4 me-4">
+                        <h6>$13</h6>
+                    </div>
+                </div>
+                <hr>
+                <div class=" d-flex  justify-content-between pt-0 ">
+                    <div class=" ms-lg-4">
+                        <h6>TOTAL</h6>
+                    </div>
+                    <div class="product-name ms-lg-4 me-4">
+                        <h6>{{totalAmount-(totalAmount*10)/100+13}}$</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

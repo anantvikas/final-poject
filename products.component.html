@@ -1,0 +1,42 @@
+<!--------jambotron tagline-->
+<div class="mt-0 p-3  text-dark head-jumbotron ">
+    <h3 class="text-jumbotron">Tagline describing your e-shop</h3>
+    <div class="input-group search-box">
+        <div class="form-outline">
+            <input type="search" id="form1" class="form-control" placeholder="Search" />
+
+        </div>
+        <div>
+            <button type="button" class="btn btn-danger">Submit</button>
+        </div>
+    </div>
+</div>
+<!-------top main component-->
+<div class="mt-0 p-3  text-dark top-component-jumbotron ">
+    <h3 class="top-text-content">Tagline describing your e-shop</h3>
+    <h6 class="text-content">Sed ut perspiciats unde omnis iste natus error sit voluptatem </h6>
+    <h6 class="text-content">accusantium doioremque laudantium</h6>
+</div>
+
+<!-------------main content-->
+<div class="container">
+    <div class="row">
+        <div *ngFor=" let item of topHeadingDisplay" class="main-content col-lg-4 col-md-6">
+
+            <div class="image ">
+                <img class="image1" src={{item.image}} width="160px" height="160px">
+
+            </div>
+            <div class="product-details">
+                <a class="title">{{item.title}}</a>
+                <h5 class="price">{{item.price}}$</h5>
+                <p class="discripction">{{item.descr}}</p>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span><br>
+                <!-- <button class="btn btn-primary" >add to cart</button> -->
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,48 @@
+.head-jumbotron {
+    background-color: #D5E5E6!important;
+    height: 140px!important;
+    .text-jumbotron {
+        text-align: center;
+    }
+    .search-box {
+        display: flex;
+        justify-content: center;
+        .form-outline {
+            .form-control {
+                width: 305px;
+            }
+        }
+    }
+}
+
+.top-component-jumbotron {
+    height: 120px!important;
+    .top-text-content {
+        text-align: center;
+    }
+    .text-content {
+        text-align: center;
+        color: cadetblue;
+    }
+}
+
+.main-content {
+    display: flex;
+    .image {
+        margin-top: 20px;
+        border: 1px lightgrey solid;
+        background-color: lightgray;
+    }
+    .image:hover {}
+    .product-details {
+        margin-left: 30px;
+        margin-top: 20px;
+        font-weight: 10px;
+        .checked {
+            color: red;
+        }
+        .title {
+            text-decoration: none;
+        }
+    }
+}
